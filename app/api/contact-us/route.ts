@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     );
 
     console.log("Recaptcha Response: ", response);
-    if (response.data.success) {
+    if (response.status === 200) {
       console.log("Successful Recaptcha");
 
       var stuff = await prisma.request.create({
