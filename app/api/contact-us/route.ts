@@ -53,7 +53,9 @@ export async function POST(request: Request) {
         text: text,
       };
 
-      sgMail.send(msg);
+      var status = sgMail.send(msg);
+
+      console.log("Status: ", status);
     }
 
     return NextResponse.json({ Message: "Hi" }, { status: 202 });
