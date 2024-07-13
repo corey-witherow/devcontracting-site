@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     if (response.data.success) {
       console.log("Successful Recaptcha");
 
-      await prisma.request.create({
+      var stuff = await prisma.request.create({
         data: {
           firstName: data.firstName,
           lastName: data.lastName,
@@ -30,6 +30,8 @@ export async function POST(request: Request) {
           requestInfo: data.message,
         },
       });
+
+      console.log("Stuff: ", stuff);
 
       const sgMail = require("@sendgrid/mail");
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
