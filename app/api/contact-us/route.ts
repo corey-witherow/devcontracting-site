@@ -17,6 +17,7 @@ export async function POST(request: Request) {
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${data.recaptchaToken}`
     );
 
+    console.log("Recaptcha Response: ", response);
     if (response.data.success) {
       console.log("Successful Recaptcha");
 
