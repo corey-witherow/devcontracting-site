@@ -1,7 +1,7 @@
-export const metadata = {
-  title: "Sign In - Open PRO",
-  description: "Page description",
-};
+// export const metadata = {
+//   title: "Sign In - Open PRO",
+//   description: "Page description",
+// };
 
 import Link from "next/link";
 
