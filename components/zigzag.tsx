@@ -4,6 +4,7 @@ import FeatImage01 from "@/public/images/dotnet.png";
 import FeatImage02 from "@/public/images/Azure.png";
 import FeatImage03 from "@/public/images/angular-react.png";
 import FeatImage04 from "@/public/images/devops.png";
+import AiImage from "@/public/images/artimage.png";
 
 export default function Zigzag() {
   return (
@@ -152,10 +153,10 @@ export default function Zigzag() {
               >
                 <Image
                   className="max-w-full mx-auto md:max-w-none h-auto"
-                  src={FeatImage03}
+                  src={AiImage}
                   width={540}
                   height={405}
-                  alt="Features 03"
+                  alt="aiImage"
                 />
               </div>
               {/* Content */}
@@ -165,13 +166,13 @@ export default function Zigzag() {
               >
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
-                    Front-end Development
+                    Artificial Intelligence
                   </div>
-                  <h3 className="h3 mb-3">Angular / React Development</h3>
+                  <h3 className="h3 mb-3">Semantic Kernel</h3>
                   <p className="text-xl text-gray-400 mb-4">
-                    Every application needs a frontend. Looking to use the most
-                    up to date framework or library? We can develop in both
-                    Angular and React.
+                    With experience building Artificial Intelligence platform
+                    with Semantic Kernel, we can assist you getting your feet in
+                    the door in the AI world.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -182,7 +183,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Typescript</span>
+                      <span>Native Functions</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -192,7 +193,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Javascript</span>
+                      <span>Semantic Functions</span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -202,7 +203,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>HTML</span>
+                      <span>Planners</span>
                     </li>
                   </ul>
                 </div>
@@ -268,6 +269,71 @@ export default function Zigzag() {
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
                       <span>Pull Requests</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 5th item */}
+            <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+              {/* Image */}
+              <div
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1"
+                data-aos="fade-up"
+              >
+                <Image
+                  className="max-w-full mx-auto md:max-w-none h-auto"
+                  src={FeatImage03}
+                  width={540}
+                  height={405}
+                  alt="Features 03"
+                />
+              </div>
+              {/* Content */}
+              <div
+                className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6"
+                data-aos="fade-right"
+              >
+                <div className="md:pr-4 lg:pr-12 xl:pr-16">
+                  <div className="font-architects-daughter text-xl text-purple-600 mb-2">
+                    Front-end Development
+                  </div>
+                  <h3 className="h3 mb-3">Angular / React Development</h3>
+                  <p className="text-xl text-gray-400 mb-4">
+                    With experience in both Angular and React, we can give your
+                    application a face for your users to interact with.
+                  </p>
+                  <ul className="text-lg text-gray-400 -mb-2">
+                    <li className="flex items-center mb-2">
+                      <svg
+                        className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Typescript</span>
+                    </li>
+                    <li className="flex items-center mb-2">
+                      <svg
+                        className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Javascript</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-green-500 mr-2 shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>HTML</span>
                     </li>
                   </ul>
                 </div>
