@@ -22,3 +22,11 @@ model Request {
   companyName String
   requestInfo String
 }
+
+model Projects {
+  id String @id @default(uuid())
+  CompanyName String
+  SkillsRequired String
+  EstimatedStartDate DateTime
+  EstimatedEndDate DateTime
+}
