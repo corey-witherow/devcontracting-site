@@ -21,12 +21,41 @@ model Request {
   email String
   companyName String
   requestInfo String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isActive Boolean
 }
 
 model Projects {
   id String @id @default(uuid())
-  CompanyName String
-  SkillsRequired String
-  EstimatedStartDate DateTime
-  EstimatedEndDate DateTime
+  companyName String
+  skillsRequired String
+  estimatedStartDate DateTime
+  estimatedEndDate DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  assignedDev Developers? @relation(fields: [userId], references: [id])
+  userId String
+  isActive Boolean
+}
+
+model Developers {
+  id String @id @default(uuid())
+  firstName String
+  lastName String
+  email String 
+  projects Projects[]
+  skills Skills[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isActive Boolean
+}
+
+model Skills {
+  id String @id @default(uuid())
+  Skill String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isActive Boolean
+  developers Developers[]
 }
