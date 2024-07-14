@@ -23,7 +23,6 @@ model Request {
   requestInfo String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  isActive Boolean
 }
 
 model Projects {
@@ -36,7 +35,6 @@ model Projects {
   updatedAt DateTime @updatedAt
   assignedDev Developers? @relation(fields: [userId], references: [id])
   userId String
-  isActive Boolean
 }
 
 model Developers {
@@ -48,7 +46,6 @@ model Developers {
   skills Skills[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  isActive Boolean
 }
 
 model Skills {
