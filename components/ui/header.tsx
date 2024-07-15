@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import MobileMenu from "./mobile-menu";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Header() {
+  const { data: session } = useSession();
+
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -40,13 +44,30 @@ export default function Header() {
                   Contact Us
                 </Link>
               </li>
+
               <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
+                {session && session.user && (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signOut();
+                    }}
+                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  >
+                    Sign Out
+                  </button>
+                )}
+                {!session && (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      signIn();
+                    }}
+                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                  >
+                    Sign In
+                  </button>
+                )}
               </li>
             </ul>
           </nav>

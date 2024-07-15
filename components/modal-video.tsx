@@ -73,7 +73,6 @@ export default function ModalVideo({
             leave="transition ease-out duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            aria-hidden="true"
           />
           {/* End: Modal backdrop */}
 

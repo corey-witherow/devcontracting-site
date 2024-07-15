@@ -1,17 +1,19 @@
-import PageIllustration from '@/components/page-illustration'
+import PageIllustration from "@/components/page-illustration";
+import { Providers } from "@/components/providers";
+import { SessionProvider } from "next-auth/react";
 
 export default function AuthLayout({
   children,
 }: {
-  children: React.ReactNode
-}) {  
+  children: React.ReactNode;
+}) {
   return (
     <main className="grow">
+      <Providers>
+        <PageIllustration />
 
-      <PageIllustration />
-
-      {children}
-
+        {children}
+      </Providers>
     </main>
-  )
+  );
 }
