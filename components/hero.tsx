@@ -15,7 +15,7 @@ export default function Hero() {
         {/* Illustration behind hero content */}
         <div
           className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none"
-          aria-hidden="true"
+          //
           data-aos="fade-up"
           data-aos-delay="400"
         >
