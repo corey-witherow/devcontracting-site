@@ -105,8 +105,7 @@ export default function ContactUs() {
                 data-aos-delay="200"
               >
                 For information on pricing and how we can help you out, please
-                fill out the form below and we will reach out to you at our
-                earliest convenience.
+                fill out the form below and we will reach out shortly.
               </p>
             </div>
             <div className="justify-center w-full items-center">
