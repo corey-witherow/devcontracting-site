@@ -51,9 +51,7 @@ export async function POST(request: Request) {
         text: text,
       };
 
-      var status = await sgMail.send(msg);
-
-      console.log("Status: ", status);
+      await sgMail.send(msg);
     }
 
     return NextResponse.json({ Message: "Hi" }, { status: 202 });
