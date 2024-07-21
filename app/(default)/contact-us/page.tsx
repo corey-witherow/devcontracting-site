@@ -18,7 +18,7 @@ export default function ContactUs() {
 
   const headerStyle: CSS.Properties = {
     color: "rgb(93 93 255 / var(--tw-text-opacity))",
-    WebkitTextStroke: "1px aquamarine",
+    WebkitTextStroke: "1px #fff",
     fontFamily: "Roboto Slab,sans-serif",
   };
 
