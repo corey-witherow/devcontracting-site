@@ -5,8 +5,7 @@ const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID ?? "",
-      clientSecret:
-        process.env.GOOGLE_SECRET ?? "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",
+      clientSecret: process.env.GOOGLE_SECRET ?? "",
     }),
   ],
 });
