@@ -243,7 +243,7 @@ export default function Zigzag() {
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2">
                     Azure DevOps
                   </div>
-                  <h3 className="h3 mb-3">CI/CD Pipelines</h3>
+                  <h3 className="h3 mb-3">Project Management</h3>
                   <p className="text-xl text-gray-400 mb-4">
                     CI/CD Pipeline builds and releases using Azure Devops.
                     Manage work tasks and code all in one place.
