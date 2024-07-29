@@ -61,7 +61,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>.Net 8.0 and later</span>
+                      <span>Applications</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -71,7 +71,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>.Net Core</span>
+                      <span>Services</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -81,7 +81,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>API Development</span>
+                      <span>Libraries</span>
                     </li>
                   </ul>
                 </div>
@@ -115,8 +115,7 @@ export default function Zigzag() {
                   <h3 className="h3 mb-3">Hosted Solutions in the Cloud</h3>
                   <p className="text-xl text-gray-400 mb-4">
                     With years of experience in Azure, let us help you develop
-                    your product in the Cloud. We have experience in a multitude
-                    of different app services. The below are just a few.
+                    your product in the Cloud.
                   </p>
                   <ul className="text-lg text-gray-400 -mb-2">
                     <li className="flex items-center mb-2">
@@ -127,7 +126,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Azure Functions</span>
+                      <span>Cloud Solutions</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -137,7 +136,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Service Bus</span>
+                      <span>Microservices</span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -147,7 +146,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>App Services</span>
+                      <span>IoT Solutions</span>
                     </li>
                   </ul>
                 </div>
@@ -323,7 +322,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Typescript</span>
+                      <span>Single-Page Applications</span>
                     </li>
                     <li className="flex items-center mb-2">
                       <svg
@@ -333,7 +332,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Javascript</span>
+                      <span>Components</span>
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -343,7 +342,7 @@ export default function Zigzag() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>HTML</span>
+                      <span>State Management</span>
                     </li>
                   </ul>
                 </div>
