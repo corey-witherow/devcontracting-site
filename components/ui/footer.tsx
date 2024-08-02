@@ -92,7 +92,8 @@ export default function Footer() {
 
             {/* Copyrights note */}
             <div className="text-gray-400 text-sm mr-4">
-              &copy; devcontracting.com. All rights reserved.
+              &copy; {new Date().getFullYear()} devcontracting.com. All rights
+              reserved.
             </div>
           </div>
         </div>
