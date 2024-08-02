@@ -72,7 +72,9 @@ export default function Header() {
                   <button
                     onClick={(e) => {
                       e.preventDefault();
-                      signIn();
+                      signIn("google", {
+                        callbackUrl: "/projects",
+                      });
                     }}
                     className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   >
