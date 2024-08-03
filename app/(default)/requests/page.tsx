@@ -3,11 +3,13 @@ import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 
 export default function Requests() {
-  const { data: session } = useSession();
+  const { data: session } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect("/");
+    },
+  });
 
-  if (!session) {
-    redirect("/");
-  }
   return (
     <>
       <section className="relative">
