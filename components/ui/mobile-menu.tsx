@@ -2,9 +2,11 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function MobileMenu() {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
+  const { data: session } = useSession();
 
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
@@ -43,7 +45,9 @@ export default function MobileMenu() {
         className={`hamburger ${mobileNavOpen && "active"}`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
+        onClick={() => {
+          setMobileNavOpen(!mobileNavOpen);
+        }}
       >
         <span className="sr-only">Menu</span>
         <svg
@@ -79,23 +83,68 @@ export default function MobileMenu() {
             </Link>
           </li> */}
           <li>
-            <Link
-              href="/contact-us"
-              className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              Contact Us
-            </Link>
+            {!session && (
+              <Link
+                href="/contact-us"
+                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                Contact Us
+              </Link>
+            )}
           </li>
           <li>
-            <Link
-              href="/signin"
-              className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              Sign in
-            </Link>
+            {!session && (
+              <Link
+                href="/signin"
+                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileNavOpen(false);
+                  signIn("google", { callbackUrl: "/projects" });
+                }}
+              >
+                Dev Sign in
+              </Link>
+            )}
           </li>
+          {session && session.user && (
+            <li>
+              <Link
+                href="/requests"
+                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                Requests
+              </Link>
+            </li>
+          )}
+          {session && session.user && (
+            <li>
+              <Link
+                href="/projects"
+                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                onClick={() => setMobileNavOpen(false)}
+              >
+                Projects
+              </Link>
+            </li>
+          )}
+          {session && session.user && (
+            <li>
+              <Link
+                href="/signin"
+                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileNavOpen(false);
+                  signOut({ callbackUrl: "/" });
+                }}
+              >
+                Sign Out
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </div>
