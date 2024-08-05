@@ -36,64 +36,66 @@ export default function Header() {
                   About Us
                 </Link>
               </li> */}
-              <li>
-                {!session && (
-                  <Link
-                    href="/contact-us"
-                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Contact Us
-                  </Link>
-                )}
-              </li>
+              {!session && (
+                <>
+                  <li>
+                    <Link
+                      href="/contact-us"
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
 
-              <li>
-                {session && session.user && (
-                  <Link
-                    href="/requests"
-                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Requests
-                  </Link>
-                )}
-              </li>
-              <li>
-                {session && session.user && (
-                  <Link
-                    href="/projects"
-                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Projects
-                  </Link>
-                )}
-              </li>
+                  <li>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        signIn("google", {
+                          callbackUrl: "/projects",
+                        });
+                      }}
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      Dev Sign In
+                    </button>
+                  </li>
+                </>
+              )}
 
-              <li>
-                {session && session.user && (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      signOut();
-                    }}
-                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Sign Out
-                  </button>
-                )}
-                {!session && (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      signIn("google", {
-                        callbackUrl: "/projects",
-                      });
-                    }}
-                    className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Dev Sign In
-                  </button>
-                )}
-              </li>
+              {session && session.user && (
+                <>
+                  <li>
+                    <Link
+                      href="/requests"
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      Requests
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/projects"
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      Projects
+                    </Link>
+                  </li>
+
+                  <li>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        signOut();
+                      }}
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      Sign Out
+                    </button>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
           <MobileMenu />
