@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       await sgMail.send(msg);
     }
 
-    return NextResponse.json({ Message: "Hi" }, { status: 202 });
+    return NextResponse.json({ Message: "Created" }, { status: 202 });
   } catch (error) {
     return NextResponse.json(
       { Message: "Error creating request" },
