@@ -82,68 +82,67 @@ export default function MobileMenu() {
               About Us
             </Link>
           </li> */}
-          <li>
-            {!session && (
-              <Link
-                href="/contact-us"
-                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Contact Us
-              </Link>
-            )}
-          </li>
-          <li>
-            {!session && (
-              <Link
-                href="/signin"
-                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMobileNavOpen(false);
-                  signIn("google", { callbackUrl: "/projects" });
-                }}
-              >
-                Dev Sign in
-              </Link>
-            )}
-          </li>
-          {session && session.user && (
-            <li>
-              <Link
-                href="/requests"
-                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Requests
-              </Link>
-            </li>
+          {!session && (
+            <>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/signin"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileNavOpen(false);
+                    signIn("google", { callbackUrl: "/projects" });
+                  }}
+                >
+                  Dev Sign in
+                </Link>
+              </li>
+            </>
           )}
+
           {session && session.user && (
-            <li>
-              <Link
-                href="/projects"
-                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Projects
-              </Link>
-            </li>
-          )}
-          {session && session.user && (
-            <li>
-              <Link
-                href="/signin"
-                className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMobileNavOpen(false);
-                  signOut({ callbackUrl: "/" });
-                }}
-              >
-                Sign Out
-              </Link>
-            </li>
+            <>
+              <li>
+                <Link
+                  href="/requests"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Requests
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/signin"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileNavOpen(false);
+                    signOut({ callbackUrl: "/" });
+                  }}
+                >
+                  Sign Out
+                </Link>
+              </li>
+            </>
           )}
         </ul>
       </nav>
