@@ -1,7 +1,7 @@
 export default function ProjectsGrid() {
   return (
     <>
-      <h1>Grid</h1>
+      <h1>Projects</h1>
     </>
   );
 }

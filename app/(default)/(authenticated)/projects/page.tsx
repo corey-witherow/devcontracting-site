@@ -1,16 +1,7 @@
 "use client";
 import ProjectsGrid from "@/components/projects-grid";
-import { getSession, useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
 
 export default function Projects() {
-  const { data: session } = useSession({
-    required: true,
-    onUnauthenticated() {
-      redirect("/");
-    },
-  });
-
   return (
     <>
       <section className="relative">

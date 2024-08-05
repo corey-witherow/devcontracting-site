@@ -9,18 +9,13 @@ const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
   try {
-    console.log("In sendEmail");
-
     const data = await request.json();
 
     const response = await axios.post(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${data.recaptchaToken}`
     );
 
-    console.log("Recaptcha Response: ", response);
     if (response.status === 200) {
-      console.log("Successful Recaptcha");
-
       await prisma.request.create({
         data: {
           firstName: data.firstName,
