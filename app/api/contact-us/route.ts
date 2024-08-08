@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         data.message;
 
       const msg = {
-        to: "corey@devcontracting.com",
+        to: "coreywitherow@gmail.com",
         from: "corey@devcontracting.com",
         subject: "Request Info",
         text: text,

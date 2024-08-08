@@ -28,16 +28,16 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-              {/* <li>
-                <Link
-                  href="/about-us"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  About Us
-                </Link>
-              </li> */}
               {!session && (
                 <>
+                  {/* <li>
+                    <Link
+                      href="/about-us"
+                      className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                    >
+                      About Us
+                    </Link>
+                  </li> */}
                   <li>
                     <Link
                       href="/contact-us"

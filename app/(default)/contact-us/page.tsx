@@ -26,34 +26,9 @@ export default function ContactUs() {
     backgroundColor: "rgb(93 93 255)",
   };
 
-  function updateFormFirstName(event: any) {
-    console.log(firstName);
-    updateFirstName(event.target.value);
-  }
-
-  function updateFormLastName(event: any) {
-    updateLastName(event.target.value);
-  }
-
-  function updateFormEmail(event: any) {
-    updateEmail(event.target.value);
-  }
-
-  function updateFormCompanyName(event: any) {
-    updateCompanyName(event.target.value);
-  }
-
-  function updateFormMessage(event: any) {
-    updateMessage(event.target.value);
-  }
-
+  // Set the captcha token when the user completes the reCAPTCHA
   const onCaptchaChange = (token: string | null) => {
-    // Set the captcha token when the user completes the reCAPTCHA
-    if (token) {
-      updateToken(token);
-    } else {
-      updateToken("");
-    }
+    updateToken(token ?? "");
   };
 
   async function submitForm() {
@@ -65,16 +40,11 @@ export default function ContactUs() {
     model.message = message;
     model.recaptchaToken = recaptchaToken;
 
-    console.log("In SubmitForm Method");
-    console.log("Email: ", email);
-
     const response = await fetch("/api/contact-us", {
       method: "POST",
       headers: { Accept: "application/json" },
       body: JSON.stringify(model),
     });
-
-    console.log("Response: ", response);
 
     if (response.status === 202) {
       try {
@@ -124,27 +94,27 @@ export default function ContactUs() {
                     type="text"
                     placeholder="First Name"
                     value={firstName}
-                    onChange={updateFormFirstName}
+                    onChange={(e) => updateFirstName(e.target.value)}
                   />
                   <input
                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     type="text"
                     placeholder="Last Name"
                     value={lastName}
-                    onChange={updateFormLastName}
+                    onChange={(e) => updateLastName(e.target.value)}
                   />
                   <input
                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={updateFormEmail}
+                    onChange={(e) => updateEmail(e.target.value)}
                   />
                   <input
                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     type="text"
                     placeholder="Company Name"
-                    onChange={updateFormCompanyName}
+                    onChange={(e) => updateCompanyName(e.target.value)}
                   />
                 </div>
                 <div className="my-4">
@@ -152,7 +122,7 @@ export default function ContactUs() {
                     placeholder="Message"
                     className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                     value={message}
-                    onChange={updateFormMessage}
+                    onChange={(e) => updateMessage(e.target.value)}
                   ></textarea>
                 </div>
 

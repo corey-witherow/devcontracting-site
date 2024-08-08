@@ -73,17 +73,17 @@ export default function MobileMenu() {
         }
       >
         <ul className="bg-gray-800 px-4 py-2">
-          {/* <li>
-            <Link
-              href="/about-us"
-              className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
-              onClick={() => setMobileNavOpen(false)}
-            >
-              About Us
-            </Link>
-          </li> */}
           {!session && (
             <>
+              {/* <li>
+                <Link
+                  href="/about-us"
+                  className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  About Us
+                </Link>
+              </li> */}
               <li>
                 <Link
                   href="/contact-us"
