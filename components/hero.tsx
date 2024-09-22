@@ -1,4 +1,4 @@
-import VideoThumb from "@/public/images/hero-image-01.jpg";
+import VideoThumb from "@/public/images/hero-logo.png";
 import ModalVideo from "@/components/modal-video";
 import CSS from "csstype";
 
@@ -68,12 +68,12 @@ export default function Hero() {
 
           <ModalVideo
             thumb={VideoThumb}
-            thumbWidth={1024}
+            thumbWidth={800}
             thumbHeight={576}
             thumbAlt="Modal video thumbnail"
             video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080}
+            videoWidth={600}
+            videoHeight={600}
           />
         </div>
       </div>

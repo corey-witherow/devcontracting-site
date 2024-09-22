@@ -1,7 +1,9 @@
+"use client";
+
 import "./css/style.css";
 import { Inter, Architects_Daughter } from "next/font/google";
 import Header from "@/components/ui/header";
-import { Providers } from "@/components/providers";
+import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,11 +17,6 @@ const architects_daughter = Architects_Daughter({
   weight: "400",
   display: "swap",
 });
-
-export const metadata = {
-  title: "DevContracting",
-  description: "Software Development Assistance",
-};
 
 export default function RootLayout({
   children,
@@ -39,13 +36,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}
       >
-        <Providers>
-          <div className="flex flex-col min-h-screen overflow-hidden">
+        <div className="flex flex-col min-h-screen overflow-hidden">
+          <SessionProvider>
             <Header />
             {children}
-            {/* <Banner /> */}
-          </div>
-        </Providers>
+          </SessionProvider>
+
+          {/* <Banner /> */}
+        </div>
       </body>
     </html>
   );

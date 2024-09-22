@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import PageIllustration from "@/components/page-illustration";
 import Footer from "@/components/ui/footer";
 import { Providers } from "@/components/providers";
+import { SessionProvider } from "next-auth/react";
 
 export default function DefaultLayout({
   children,
@@ -26,11 +27,11 @@ export default function DefaultLayout({
   return (
     <>
       <main className="grow">
-        <Providers>
+        <SessionProvider>
           <PageIllustration />
 
           {children}
-        </Providers>
+        </SessionProvider>
       </main>
 
       <Footer />
