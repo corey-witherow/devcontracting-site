@@ -30,14 +30,14 @@ export default function Header() {
             <ul className="flex grow justify-end flex-wrap items-center">
               {!session && (
                 <>
-                  {/* <li>
+                  <li>
                     <Link
                       href="/about-us"
                       className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                     >
                       About Us
                     </Link>
-                  </li> */}
+                  </li>
                   <li>
                     <Link
                       href="/contact-us"
@@ -87,7 +87,7 @@ export default function Header() {
                     <button
                       onClick={(e) => {
                         e.preventDefault();
-                        signOut();
+                        signOut({ callbackUrl: "/" });
                       }}
                       className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                     >
